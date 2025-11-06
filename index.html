@@ -18,34 +18,70 @@
     h2{font-size:2rem;margin-bottom:1rem;}
     ul{margin:0;padding-left:1.25rem;line-height:1.6;}
     footer{padding:3rem 1.5rem;text-align:center;font-size:0.875rem;color:#666;}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.25rem;}
+    .slab{background:#fff;aspect-ratio:2/3;border-radius:0.75rem;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:0.9rem;color:#aaa;}
+    table{width:100%;border-collapse:collapse;font-size:1rem;margin-top:1.5rem;}
+    table th,table td{padding:0.75rem;border-bottom:1px solid #ddd;text-align:left;}
   </style>
 </head>
 <body>
 
-  <header class="hero">
-    <h1>Serventes Slab Grading</h1>
-    <p class="lead">Professional card grading with transparent scoring, modern authentication, and secure slab encapsulation. Built for collectors who actually care.</p>
-    <a class="cta" href="#services">View Services</a>
-  </header>
+<header class="hero">
+  <h1>Serventes Slab Grading</h1>
+  <p class="lead">Professional card grading with transparent scoring, modern authentication, and secure slab encapsulation. Built for collectors who actually care.</p>
+  <a class="cta" href="#services">View Services</a>
+</header>
 
-  <section id="services">
-    <h2>What We Offer</h2>
-    <ul>
-      <li>Full surface / corners / edges / centering subgrades</li>
-      <li>High clarity archival plastic slabs</li>
-      <li>Tamper‑evident security label with QR verification</li>
-      <li>API‑based population reporting (in dev)</li>
-    </ul>
-  </section>
+<section id="services">
+  <h2>What We Offer</h2>
+  <ul>
+    <li>Full surface / corners / edges / centering subgrades (included automatically)</li>
+    <li>High clarity archival plastic slabs</li>
+    <li>Tamper-evident security label with QR verification</li>
+    <li>API-based population reporting (in dev)</li>
+  </ul>
+</section>
 
-  <section>
-    <h2>Launch ETA</h2>
-    <p>We are currently finalizing chain‑of‑custody tracking and the QC workflow. Public intake opens Q1 2026. Follow the repo for updates.</p>
-  </section>
+<section>
+  <h2>How Our Grading Works</h2>
+  <p>Every card is evaluated by two independent graders and reconciled with weighted logic to eliminate curve bias. Subgrades are individually scored, logged, and cryptographically signed against your card ID hash before encapsulation.</p>
+  <ul>
+    <li>2× human graders + digital cross-check</li>
+    <li>failure tolerant custody chain</li>
+    <li>unique slab fingerprint + QR trace</li>
+  </ul>
+</section>
 
-  <footer>
-    &copy; 2025 Servnetes Slab Grading — All Rights Reserved
-  </footer>
+<section>
+  <h2>Pricing & Turnaround</h2>
+
+  <table>
+    <tr><th>Tier</th><th>Price</th><th>Turnaround</th></tr>
+    <tr><td>Economy</td><td>$15</td><td>30 business days</td></tr>
+    <tr><td>Standard</td><td>$30</td><td>10 business days</td></tr>
+    <tr><td>Priority</td><td>$50</td><td>3 business days</td></tr>
+  </table>
+
+  <p style="margin-top:0.75rem;font-size:0.9rem;color:#555;">return shipping billed after final weight — slabs ship in security bag</p>
+</section>
+
+<section>
+  <h2>Sample Slabs (visual style prototype)</h2>
+  <div class="gallery">
+    <div class="slab">Placeholder Slab</div>
+    <div class="slab">Placeholder Slab</div>
+    <div class="slab">Placeholder Slab</div>
+  </div>
+</section>
+
+<section>
+  <h2>Launch ETA</h2>
+  <p>We are currently finalizing chain-of-custody tracking and the QC workflow. Public intake opens Q1 2026. Follow the repo for updates.</p>
+</section>
+
+<footer>
+  &copy; 2025 Serventes Slab Grading — All Rights Reserved
+</footer>
 
 </body>
 </html>
