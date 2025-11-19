@@ -243,38 +243,51 @@
             certifiedDate: "2024-08-15"
         }
     };
+function lookupCard() {
+    const input = document.getElementById("serial-input").value.trim().toUpperCase();
+    const result = document.getElementById("lookup-result");
+    result.innerHTML = "";
 
-    function lookupCard() {
-        const input = document.getElementById("serial-input").value.trim().toUpperCase();
-        const result = document.getElementById("lookup-result");
-        result.innerHTML = "";
+    const card = gradedCards[input];
 
-        const card = gradedCards[input];
-
-        if (!card) {
-            result.innerHTML = `
-                <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-xl">
-                    <p class="text-red-700 font-bold mb-2">❌ Serial Not Found</p>
-                    <p class="text-gray-700">Please double-check your entry.</p>
-                </div>`;
-            return;
-        }
-
-        let subHtml = Object.entries(card.subgrades)
-            .map(([k, v]) => `<strong>${k}:</strong> ${v}`)
-            .join(" | ");
-
+    if (!card) {
         result.innerHTML = `
-            <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded-xl">
-                <h3 class="font-bold text-green-700 text-xl mb-2">✔ Verified Nova Slab</h3>
-                <p class="text-novaBlack font-bold text-2xl mb-1">${card.cardName} (${card.year})</p>
-                <p class="text-novaGold font-bold text-xl mb-4">Grade: ${card.grade}</p>
-                <p><strong>Serial:</strong> ${input}</p>
-                <p><strong>Set:</strong> ${card.set}</p>
-                <p><strong>Certified:</strong> ${card.certifiedDate}</p>
-                <p class="mt-2"><strong>Subgrades:</strong> ${subHtml}</p>
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-xl">
+                <p class="text-red-700 font-bold mb-2">❌ Serial Not Found</p>
+                <p class="text-gray-700">Please double-check your entry.</p>
             </div>`;
+        return;
     }
+
+    let subHtml = Object.entries(card.subgrades)
+        .map(([k, v]) => `<strong>${k}:</strong> ${v}`)
+        .join(" | ");
+
+    result.innerHTML = `
+        <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded-xl">
+            <h3 class="font-bold text-green-700 text-xl mb-2">✔ Verified Nova Slab</h3>
+
+            <p class="text-novaBlack font-bold text-2xl mb-1">
+                ${card.cardName} (${card.year})
+            </p>
+
+            <p class="text-novaGold font-bold text-xl mb-2">
+                Grade: ${card.grade}
+            </p>
+
+            <p class="text-novaBlack font-semibold text-lg mb-4">
+                Population: ${card.population}
+            </p>
+
+            <p><strong>Serial:</strong> ${input}</p>
+            <p><strong>Set:</strong> ${card.set}</p>
+            <p><strong>Certified:</strong> ${card.certifiedDate}</p>
+
+            <p class="mt-3">
+                <strong>Subgrades:</strong> ${subHtml}
+            </p>
+        </div>`;
+}
 </script>
 
 </body>
