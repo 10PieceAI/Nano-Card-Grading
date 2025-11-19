@@ -1,0 +1,40 @@
+body {
+    background-color: #000;
+    color: gold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    border: 2px solid gold;
+    border-radius: 10px;
+    background-color: #111;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid gold;
+    background-color: #222;
+    color: gold;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+}
