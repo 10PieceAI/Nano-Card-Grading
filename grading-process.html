@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Grading Works – Nova Grading Co.</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        novaGold: '#B8860B',    // Deep Gold
+                        novaBlack: '#0A0A0A',   // Premium black
+                        novaGray: '#1A1A1A',    // Dark gray for soft contrast
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-novaBlack text-white min-h-screen flex flex-col">
+
+    <!-- Top Bar / Nav -->
+    <header class="border-b border-zinc-800 bg-black/60 backdrop-blur">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-novaGold flex items-center justify-center font-bold text-xs tracking-widest">
+                    NOVA
+                </div>
+                <div>
+                    <p class="text-sm uppercase tracking-[0.2em] text-zinc-400">Nova Grading Co.</p>
+                    <p class="text-xs text-zinc-500">A New Star in Card Grading</p>
+                </div>
+            </a>
+
+            <nav class="hidden sm:flex items-center gap-6 text-sm">
+                <a href="index.html#services" class="text-zinc-400 hover:text-white transition">Services</a>
+                <a href="index.html#pricing" class="text-zinc-400 hover:text-white transition">Pricing</a>
+                <a href="index.html#submit" class="text-zinc-400 hover:text-white transition">Submit Cards</a>
+                <a href="grading-process.html" class="text-novaGold font-medium">Grading Process</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        <!-- Hero -->
+        <section class="border-b border-zinc-900 bg-gradient-to-b from-zinc-950 to-novaBlack">
+            <div class="max-w-5xl mx-auto px-4 py-12 sm:py-16">
+                <p class="text-xs uppercase tracking-[0.28em] text-zinc-500 mb-4">
+                    Step-by-Step Guide
+                </p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4">
+                    How Your Cards Get Graded
+                </h1>
+                <p class="text-zinc-400 max-w-2xl">
+                    From the moment you submit your order to the time your slabs are back in your hands,
+                    we follow a clear, transparent process using <span class="text-novaGold font-medium">AI-assisted analysis</span>
+                    and <span class="text-novaGold font-medium">expert human review</span>.
+                    Here’s exactly what to expect.
+                </p>
+            </div>
+        </section>
+
+        <!-- Step-by-step timeline -->
+        <section class="max-w-5xl mx-auto px-4 py-10 sm:py-14">
+            <div class="grid md:grid-cols-[1.1fr,0.9fr] gap-10 lg:gap-16 items-start">
+
+                <!-- Steps -->
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-semibold mb-6">
+                        The Nova Grading Workflow
+                    </h2>
+
+                    <ol class="space-y-6 relative">
+                        <!-- Vertical line -->
+                        <div class="absolute left-4 top-0 bottom-0 border-l border-zinc-800 hidden sm:block"></div>
+
+                        <!-- Step 1 -->
+                        <li class="relative pl-10">
+                            <div class="hidden sm:block absolute left-3 top-1 w-3 h-3 rounded-full bg-novaGold shadow-[0_0_12px_rgba(184,134,11,0.7)]"></div>
+                            <h3 class="font-semibold text-lg">
+                                1. Online Submission
+                            </h3>
+                            <p class="text-sm text-zinc-400 mt-1">
+                                Start on our main website by completing the submission form. You’ll:
+                            </p>
+                            <ul class="text-sm text-zinc-400 mt-2 list-disc list-inside space-y-1">
+                                <li>Enter your contact and return shipping information.</li>
+                                <li>List each card (year, set, player, card number, parallels, etc.).</li>
+                                <li>Choose your desired service level / turnaround time.</li>
+                                <li>Confirm if you want subgrades, autograph grading, or special notes.</li>
+                            </ul>
+                            <p class="text-xs text-zinc-500 mt-2">
+                                <span class="font-semibold text-zinc-300">Tip:</span> Double-check spelling and card details to make population reports and future rechecks easier.
+                            </p>
+                        </li>
+
+                        <!-- Step 2 -->
+                        <li class="relative pl-10">
+                            <div class="hidden sm:block absolute left-3 top-1 w-3 h-3 rounded-full bg-novaGold"></div>
+                            <h3 class="font-semibold text-lg">
+                                2. Prepare & Package Your Cards
+                            </h3>
+                            <p class="text-sm text-zinc-400 mt-1">
+                                Before shipping, please package your cards safely:
+                            </p>
+                            <ul class="text-sm text-zinc-400 mt-2 list-disc list-inside space-y-1">
+                                <li>Place each raw card into a <span class="text-zinc-200">penny sleeve</span> first.</li>
+                                <li>Insert sleeved cards into <span class="text-zinc-200">rigid card savers (preferred)</span> or top loaders.</li>
+                                <li>Stack cards together and wrap with a soft band or painter’s tape (avoid regular tape on cards).</li>
+                                <li>Sandwich the stack between pieces of cardboard for extra rigidity.</li>
+                                <li>Use bubble wrap or foam and place everything in a sturdy box (avoid plain envelopes).</li>
+                            </ul>
+                            <p class="text-xs text-zinc-500 mt-2">
+                                <span class="font-semibold text-zinc-300">Do not:</span> send cards in screw-down holders or one-touch cases; these will be removed and may risk damage.
+                            </p>
+                        </li>
+
+                        <!-- Step 3 -->
+                        <li class="relative pl-10">
+                            <div class="hidden sm:block absolute left-3 top-1 w-3 h-3 rounded-full bg-novaGold"></div>
+                            <h3 class="font-semibold text-lg">
+                                3. Ship to Nova Grading Co.
+                            </h3>
+                            <p class="text-sm text-zinc-400 mt-1">
+                                Ship your package to the address provided at the end of the submission form. We recommend:
+                            </p>
+                            <ul class="text-sm text-zinc-400 mt-2 list-disc list-inside space-y-1">
+                                <li>Using a tracked shipping method (USPS, UPS, FedEx, etc.).</li>
+                                <li>Adding insurance that matches the estimated value of your cards.</li>
+                                <li>Including a printed copy of your submission confirmation inside the box.</li>
+                            </ul>
+                            <p class="text-xs text-zinc-500 mt-2">
+                                Once your tracking shows delivered, please allow a short intake window for us to log your order into our system.
+                            </p>
+                        </li>
+
+                        <!-- Step 4 -->
+                        <li class="relative pl-10">
+                            <div class="hidden sm:block absolute left-3 top-1 w-3 h-3 rounded-full bg-novaGold"></div>
+                            <h3 class="font-semibold text-lg">
+                                4. Check-In & Order Verification
+                            </h3>
+                            <p class="text-sm text-zinc-400 mt-1">
+                                After your package arrives:
+                            </p>
+                            <ul class="text-sm text-zinc-400 mt-2 list-disc list-inside space-y-1">
+                                <li>We open and verify card counts against your submission list.</li>
+                                <li>Your cards are assigned an internal order ID and secured in our grading vault.</li>
+                                <li>Any obvious issues (missing items, damage in transit, etc.) are documented and we contact you if needed.</li>
+                            </ul>
+                            <p class="text-xs text-zinc-500 mt-2">
+                                At this point, your turnaround clock begins based on the service level you selected.
+                            </p>
+                        </li>
+
+                        <!-- Step 5 -->
+                        <li class="relative pl-10">
+                            <div class="hidden sm:block absolute left-3 top-1 w-3 h-3 rounded-full bg-novaGold"></div>
+                            <h3 class="font-semibold text-lg">
+                                5. AI Pre-Grading & Imaging
+                            </h3>
+                            <p class="text-sm text-zinc-400 mt-1">
+                                We scan and image your cards using high-resolution equipment. Our AI grading system then:
+                            </p>
+                            <ul class="text-sm text-zinc-400 mt-2 list-disc list-inside space-y-1">
+                                <li>Analyzes corners, edges, centering, and surface details.</li>
+                                <li>Flags print lines, whitening, creases, and other imperfections.</li>
+                                <li>Generates a preliminary score range and notes for human graders.</li>
+                            </ul>
+                            <p class="text-xs text-zinc-500 mt-2">
+                                AI never replaces the grader—it provides consistent, unbiased data so our experts can focus on final judgment.
+                            </p>
+                        </li>
+
+                        <!-- Step 6 -->
+                        <li class="relative pl-10">
+                            <div class="hidden sm:block absolute left-3 top-1 w-3 h-3 rounded-full bg-novaGold"></div>
+                            <h3 class="font-semibold text-lg">
+                                6. Human Grading & Subgrades
+                            </h3>
+                            <p class="text-sm text-zinc-400 mt-1">
+                                Experienced graders review each card in hand, along with AI analysis. They:
+                            </p>
+                            <ul class="text-sm text-zinc-400 mt-2 list-disc list-inside space-y-1">
+                                <li>Independently evaluate each subcategory (corners, edges, surface, centering).</li>
+                                <li>Cross-check AI flags to confirm or correct detected defects.</li>
+                                <li>Assign final subgrades and an overall grade based on our scale.</li>
+                            </ul>
+                            <p class="text-xs text-zinc-500 mt-2">
+                                Multiple graders may review high-value or borderline cards to ensure fairness and consistency.
+                            </p>
+                        </li>
+
+                        <!-- Step 7 -->
+                        <li class="relative pl-10">
+                            <div class="hidden sm:block absolute left-3 top-1 w-3 h-3 rounded-full bg-novaGold"></div>
+                            <h3 class="font-semibold text-lg">
+                                7. Slabbing & Label Creation
+                            </h3>
+                            <p class="text-sm text-zinc-400 mt-1">
+                                Once grades are finalized:
+                            </p>
+                            <ul class="text-sm text-zinc-400 mt-2 list-disc list-inside space-y-1">
+                                <li>Labels are printed with set, player, grade, and subgrades (if selected).</li>
+                                <li>Cards are sonically sealed in our custom Nova holders.</li>
+                                <li>Each slab receives a unique ID / serial number for future verification.</li>
+                            </ul>
+                            <p class="text-xs text-zinc-500 mt-2">
+                                Slabs are inspected to make sure there’s no debris, misaligned labels, or case defects.
+                            </p>
+                        </li>
+
+                        <!-- Step 8 -->
+                        <li class="relative pl-10">
+                            <div class="hidden sm:block absolute left-3 top-1 w-3 h-3 rounded-full bg-novaGold"></div>
+                            <h3 class="font-semibold text-lg">
+                                8. Quality Control & Population Logging
+                            </h3>
+                            <p class="text-sm text-zinc-400 mt-1">
+                                Before your order ships:
+                            </p>
+                            <ul class="text-sm text-zinc-400 mt-2 list-disc list-inside space-y-1">
+                                <li>Final QC confirms each slab’s grade matches our system records.</li>
+                                <li>Cards are logged into our population database (where applicable).</li>
+                                <li>We prepare your digital or printed grade summary.</li>
+                            </ul>
+                        </li>
+
+                        <!-- Step 9 -->
+                        <li class="relative pl-10">
+                            <div class="hidden sm:block absolute left-3 top-1 w-3 h-3 rounded-full bg-novaGold"></div>
+                            <h3 class="font-semibold text-lg">
+                                9. Return Shipping to You
+                            </h3>
+                            <p class="text-sm text-zinc-400 mt-1">
+                                Your graded slabs are packed securely for return:
+                            </p>
+                            <ul class="text-sm text-zinc-400 mt-2 list-disc list-inside space-y-1">
+                                <li>Slabs are wrapped and separated to prevent scratching.</li>
+                                <li>We use protective packing materials and a sturdy box.</li>
+                                <li>Tracking information is sent to the email used on your order.</li>
+                            </ul>
+                            <p class="text-xs text-zinc-500 mt-2">
+                                Turnaround time depends on the service level you selected and begins at check-in, not the day you ship.
+                            </p>
+                        </li>
+
+                        <!-- Step 10 -->
+                        <li class="relative pl-10">
+                            <div class="hidden sm:block absolute left-3 top-1 w-3 h-3 rounded-full bg-novaGold"></div>
+                            <h3 class="font-semibold text-lg">
+                                10. Viewing Your Grades & Pop Reports
+                            </h3>
+                            <p class="text-sm text-zinc-400 mt-1">
+                                After your order is completed, you can:
+                            </p>
+                            <ul class="text-sm text-zinc-400 mt-2 list-disc list-inside space-y-1">
+                                <li>Review your grades via the order summary we provide.</li>
+                                <li>Look up certain cards in our population report (as it launches and expands).</li>
+                                <li>Reference slab IDs for future crossovers, sales listings, or rechecks.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Info / Callouts -->
+                <aside class="space-y-6">
+                    <div class="border border-zinc-800 rounded-2xl bg-zinc-950/60 p-5 sm:p-6">
+                        <h3 class="text-lg font-semibold mb-2 flex items-center gap-2">
+                            Turnaround Expectations
+                        </h3>
+                        <p class="text-sm text-zinc-400 mb-3">
+                            Turnaround times vary based on the service level you choose on the main site
+                            (e.g., Economy, Standard, Express).
+                        </p>
+                        <ul class="text-sm text-zinc-400 space-y-1 list-disc list-inside">
+                            <li>Clock starts after check-in, not when you ship.</li>
+                            <li>High-volume periods or special events may extend estimates.</li>
+                            <li>We’ll contact you if any major delays occur.</li>
+                        </ul>
+                    </div>
+
+                    <div class="border border-novaGold/60 rounded-2xl bg-gradient-to-br from-zinc-950 to-novaGray p-5 sm:p-6">
+                        <h3 class="text-lg font-semibold mb-2">
+                            Shipping & Packaging Checklist
+                        </h3>
+                        <ul class="text-sm text-zinc-200 space-y-2">
+                            <li>✓ Each card in a penny sleeve</li>
+                            <li>✓ Use card savers or top loaders (no screw downs)</li>
+                            <li>✓ Protect with cardboard + bubble wrap</li>
+                            <li>✓ Put in sturdy box (not a plain envelope)</li>
+                            <li>✓ Include printed submission form</li>
+                            <li>✓ Use tracked & insured shipping</li>
+                        </ul>
+                    </div>
+
+                    <div class="border border-zinc-800 rounded-2xl bg-zinc-950/60 p-5 sm:p-6">
+                        <h3 class="text-lg font-semibold mb-2">
+                            Ready to Submit?
+                        </h3>
+                        <p class="text-sm text-zinc-400 mb-4">
+                            When you’re ready, head back to the submission section on our main page to start your order.
+                        </p>
+                        <a href="index.html#submit"
+                           class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-novaGold text-black text-sm font-semibold hover:bg-yellow-500 transition">
+                            Go to Submission Form
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-900 bg-black/70">
+        <div class="max-w-5xl mx-auto px-4 py-6 text-xs text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <p>© <span id="year"></span> Nova Grading Co. All rights reserved.</p>
+            <p class="text-zinc-600">AI-assisted, human-verified card grading.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
