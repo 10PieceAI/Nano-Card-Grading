@@ -192,6 +192,111 @@
     </div>
 </section>
 
+<!-- Advanced Serial Number + Card Database Search Interface for Nova Grading Co. -->
+
+
+<!-- DROP THIS INTO YOUR WEBSITE BELOW THE VERIFY SECTION -->
+<section id="database-search" class="py-20 bg-white text-novaBlack">
+<div class="max-w-6xl mx-auto px-6 text-center">
+
+
+<h2 class="text-5xl font-extrabold text-novaBlack border-b-4 border-novaGold inline-block pb-2">
+Nova Global Card Database
+</h2>
+<p class="mt-4 text-gray-600">
+Search the entire Nova graded card registry by serial number, player, set, year, or grade.
+</p>
+
+
+<!-- SEARCH BAR -->
+<div class="mt-10 flex flex-col md:flex-row gap-4 justify-center">
+<input id="global-search" type="text" placeholder="Search by player, set, year, grade, or serial..."
+class="w-full md:w-2/3 p-4 border-2 border-gray-300 rounded-xl shadow text-black">
+
+
+<button onclick="runGlobalSearch()"
+class="px-8 py-3 bg-novaBlack text-white rounded-xl hover:bg-gray-800 transition">
+Search
+</button>
+</div>
+
+
+<!-- RESULTS TABLE -->
+<div class="mt-12 overflow-x-auto">
+<table class="min-w-full bg-gray-50 rounded-xl shadow-xl text-left">
+<thead class="bg-novaBlack text-white">
+<tr>
+<th class="px-6 py-3">Serial</th>
+<th class="px-6 py-3">Card</th>
+<th class="px-6 py-3">Set</th>
+<th class="px-6 py-3">Year</th>
+<th class="px-6 py-3">Grade</th>
+<th class="px-6 py-3">Population</th>
+</tr>
+</thead>
+<tbody id="search-results" class="text-novaBlack"></tbody>
+</table>
+</div>
+</div>
+</section>
+
+
+<!-- JS LOGIC FOR THE ADVANCED DATABASE SEARCH -->
+<script>
+function runGlobalSearch() {
+const q = document.getElementById("global-search").value.trim().toUpperCase();
+const results = document.getElementById("search-results");
+results.innerHTML = "";
+
+
+let found = [];
+
+
+for (const serial in gradedCards) {
+const c = gradedCards[serial];
+
+
+// Match against multiple fields
+const match =
+serial.includes(q) ||
+c.cardName.toUpperCase().includes(q) ||
+c.set.toUpperCase().includes(q) ||
+String(c.year).includes(q) ||
+String(c.grade).includes(q);
+
+
+if (match) {
+found.push({ serial, ...c });
+}
+}
+
+
+if (found.length === 0) {
+results.innerHTML = `
+<tr>
+<td colspan="6" class="px-6 py-4 text-center text-gray-500 italic">
+No results found.
+</td>
+</tr>`;
+return;
+}
+
+
+// Build table rows
+found.forEach(item => {
+results.innerHTML += `
+<tr class="border-b border-gray-300 hover:bg-gray-100">
+<td class="px-6 py-4 font-bold">${item.serial}</td>
+<td class="px-6 py-4">${item.cardName}</td>
+<td class="px-6 py-4">${item.set}</td>
+<td class="px-6 py-4">${item.year}</td>
+<td class="px-6 py-4 font-bold text-novaGold">${item.grade}</td>
+<td class="px-6 py-4">${item.population}</td>
+</tr>`;
+});
+}
+</script>
+    
 <!-- SUBMIT -->
 <section id="submit" class="py-20 bg-novaGold">
     <div class="max-w-4xl mx-auto px-6 text-center">
